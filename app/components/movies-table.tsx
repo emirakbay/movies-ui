@@ -65,6 +65,11 @@ export default function MoviesTable() {
     }
   }, [inputRef]);
 
+  useEffect(() => {
+    setTotalResults(0);
+    setCurrentPage(1);
+  }, [searchTerm]);
+
   return (
     <>
       {loaded ? (
